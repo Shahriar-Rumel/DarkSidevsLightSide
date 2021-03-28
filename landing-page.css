@@ -1,0 +1,130 @@
+:root{
+    --hover-width:75%;
+    --other-width:25%;
+
+}
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Marvel', sans-serif;
+}
+.container{
+    height: 100vh;
+    width:100vw;
+}
+
+.split{
+
+    position: absolute;
+    width:50%;
+    height:100%;
+    overflow: hidden;
+    transition: 0.7s ease-in;
+}
+.split.left{
+    left:0;
+    background:url('images/lightside.jpg');
+    width:50%;
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s ease-in;
+}
+.split.left::before{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(165, 165, 165, 0.267);
+}
+
+.split.right{
+    right:0;
+    background:url('images/darkside1.jpg');
+    width:50%;
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s ease-in;
+}
+.split.right::before{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(8, 8, 8, 0.267);
+  
+
+}
+h1{
+    position: absolute;
+    font-size :1.5rem;
+    color:rgb(253, 253, 253);
+    top:35%;
+    left:50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.left button{
+    position: absolute;
+    width:10rem;
+    height: 2.5rem;
+    border:1px white solid;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 900;
+    top:50%;
+    left:50%;
+    cursor: pointer;
+    font-family: 'Marvel', sans-serif;
+    transform: translateX(-50%);
+    color:rgb(19, 168, 253);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.right button{
+    position: absolute;
+    width:10rem;
+    height: 2.5rem;
+    border:1px white solid;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 900;
+    top:50%;
+    left:50%;
+    cursor: pointer;
+    font-family: 'Marvel', sans-serif;
+    transform: translateX(-50%);
+    color:rgba(236, 14, 14, 0.904);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.left button:hover{
+    width: 10.5rem;
+    height:3rem;
+    background-color: rgba(23, 24, 23, 0.486);
+    font-size: 1.5rem;
+}
+.right button:hover{
+    width: 10.5rem;
+    height:3rem;
+    background-color: rgba(23, 24, 23, 0.486);
+    font-size: 1.5rem;
+}
+button:focus{
+    outline: none;
+}
+.hover-left .left{
+    width:var(--hover-width);
+}
+.hover-left .right{
+    width:var(--other-width);
+}
+.hover-right .right{
+    width:var(--hover-width);
+}
+.hover-right .left{
+    width:var(--other-width);
+}
